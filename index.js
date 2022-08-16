@@ -21,7 +21,9 @@ fs.createReadStream('kepler_data.csv')
         console.log(err);
     })
     .on('end', ()=> {
-        console.log(results, `${results.length} habitable planets found`);
+        console.log(results)
+        console.log(results.map(planet => planet['kepler_name']))
+        console.log(`${results.length} habitable planets found`)
         console.log('done')
     });
 
